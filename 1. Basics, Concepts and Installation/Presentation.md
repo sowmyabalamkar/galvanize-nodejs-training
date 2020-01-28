@@ -68,7 +68,7 @@ push/unshift : Adds to last /first resp
     * Avoid Unnecessary Variables
 
 ## ES5 vs ES6
-### ES5
+### ES5 2009
     The "use strict" Directive
     String.trim()
     Array.isArray()
@@ -87,7 +87,7 @@ push/unshift : Adds to last /first resp
     Property Getters and Setters
     New Object Property Methods
 
-### ES6
+### ES6 2015
     JavaScript let
     JavaScript const
     JavaScript Arrow Functions
@@ -97,11 +97,17 @@ push/unshift : Adds to last /first resp
     Array.findIndex()
     Exponentiation (**) (EcmaScript 2016)
     
+Refer w3schools for more information.
+
 ## Client Server Architecture
 ![](assets/1.png)
 
+
+---
+
 ## MultiThread Model
 _Each request is handled by a separate thread_
+
 ![](assets/multithreaded.png)
 * User generates a request while intacting with the application and sends to the server.
 * Server maps a new thread from the thread pool and thread becomes responsible to read the request and send the response.
@@ -110,8 +116,10 @@ _Each request is handled by a separate thread_
     * Millions requests coming in pers sec and limited threads. Thread exhausation might occur.
     * Lead to scalability and solved by adding multiple resources
 * 2 Scenario or limitation:
-    * Shared resource issue(acquires a lock) which leads to slow response time and bottleneck for the server.(blocks other threads)
+    * Shared resource issue(acquires a lock) which leads to slow response time and bottleneck for the server.(blocks other threads)  
     
+---
+
 
 ## SingleThread Model
 ![](assets/singlethreaded.png)
@@ -125,32 +133,56 @@ _Each request is handled by a separate thread_
 * So, No function in node js can perform a action directly so process never gets blocked.
  Event driven model. Node js follows this
 
+ ---
+
 ## Summary on Multi Thread vs Single Thread
 ![](assets/summarythread.png)    
 
+
+---
+
 ## What is Node JS?
 ![](assets/whatisnodejs.png)
+
+---
 
 ## Who all uses Node JS?
 ![](assets/successstory.png)
 * Well suited for distributed systems that make a lot of network requests.
 * Active open source community.
+
+---
+
 ## Asynchronous and Event Driven
 ![](assets/asynceventdriven.png)
 * When request is sent to server, Server doesnt waits to process the request rather it continues to process other requests. Request processing completes, response is sent back to caller func via callback mechanism.
 
+---
+
 ## Blocking and Non-blocking
     A restaurant food order system. 
-    -- will cover practival in file stream section.
+    -- will cover practical in file stream section.
+
+---
 ## Node js features
 ![](assets/nodefeatures.png)
 
+---
+
 ## Node js installation
 https://nodejs.org/en/download/
+
+---
 
 ## nvm 
 Node Version Manager -- created typically for linux but post v10, it came with windows also.
 https://github.com/coreybutler/nvm-windows
 
+---
+
 ### nvm commands
 ![](assets/nvm.png)
+
+![](assets/nvm2.png)
+
+---
