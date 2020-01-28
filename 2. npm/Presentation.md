@@ -14,8 +14,30 @@
 
 
 ## package.json and package-lock.json
-package-lock.json
-Introduced in npm v5, the purpose of this file is to ensure that the dependencies remain the same on all machines the project is installed on. It is automatically generated for any operations where npm modifies either the node_modules folder, or package.json file.
+1. The package.json 
+    - used for more than dependencies -     like defining project properties, description, author & license information, scripts, etc. 
+    - records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
+2. The package-lock.json is solely used to lock dependencies to a specific version number.
+    - Introduced in npm v5, the purpose of this file is to ensure that the dependencies remain the same on all machines the project is installed on. 
+    - It is automatically generated for any operations where npm modifies either the node_modules folder, or package.json file.
+    - records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
+
+<i>Summary - package-lock</i>
+* large list of each dependency listed in your package.json
+* the specific version that should be installed
+* the location of the module (URI)
+* a hash that verifies the integrity of the module
+* the list of packages it requires
+* a list of dependencies.
+
+![](assets/express.png)
+
+<i>Question arises</i>
+- <i>Do you need both package-lock.json and package.json?</i> <b>No.</b>
+- <i>Do you need the package.json? </i> <b>Yes.  </b>
+- <i>Can you have a project with only the package-lock.json? </i> <b>No.</b>
+
+   
 
 ## npm commmands
 * npm config
@@ -46,6 +68,8 @@ Introduced in npm v5, the purpose of this file is to ensure that the dependencie
 ## Audit
 npm audit
 npm audit fix
+
+
 ## How a npm install actually works? What happens?
 * Load the existing node_modules tree from disk
 * clone the tree
@@ -66,6 +90,24 @@ For more info, https://docs.npmjs.com/cli/install
 
 
 
+# Lets create a node js application
+
+Node js consists of below:
+* <b><i>Import required modules </i></b>− We use the require directive to load Node.js modules.
+* <b><i>Create server </i></b>− A server which will listen to client's requests similar to Apache HTTP Server.
+* <b><i>Read request and return response </i></b>− The server created in an earlier step will read the HTTP request made by the client which can be a browser or a console and return the response.
+
+# Demo
+
+# Node REPL (Read Eval Print Loop)
+
+<b>Read</b> <i> Reads user input, parses the input  into JS datastructure and stores in memory</i>
+--
+
+<b>Eval</b>     <i>Takes and evaluates the data structure</i>
+<b>Print</b>    <i>prints the result</i>
+<b>Loop</b>     <i>Loops the above command until user presses Ctrl+C</i>
 
 
+# Demo
 
