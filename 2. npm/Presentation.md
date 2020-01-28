@@ -13,11 +13,37 @@
 ![](assets/packagejson.png)
 
 
-## package.json and package-lock.json
+
+## Semantic Versioning
+![](assets/semanticversion.png)
+Major.minor.patch
+
+## package.json 
 1. The package.json 
     - used for more than dependencies -     like defining project properties, description, author & license information, scripts, etc. 
     - records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
-2. The package-lock.json is solely used to lock dependencies to a specific version number.
+
+<b> ^ </b> This can be total destroyer of the project
+--
+
+<b> ^ </b> sign before the version tells npm that if someone clones the project and runs npm install in the directory then install the latest minor version of the package in his node_modules.
+
+
+
+e.g.: 
+    If I have 2.22.0 and express releases 2.24.0
+    When someone clone my repo and runs npm install in that directory they will get the version 2.24.0 (You can also put ~ instead of ^ it will update to latest patch version)
+    What if some changes to exisiting funcitonality and minor changes.   
+
+## package-lock.json
+![](assets/packagelock.png)
+* package-lock.json will simply avoid this general behavior of installing updated minor version so when someone clones your repo 
+* run npm install in their machine. 
+* NPM will look into package-lock.json and install exact versions of the package as the owner has installed so it will ignore the ^ and ~ from package.json.
+
+
+
+* The package-lock.json is solely used to lock dependencies to a specific version number.
     - Introduced in npm v5, the purpose of this file is to ensure that the dependencies remain the same on all machines the project is installed on. 
     - It is automatically generated for any operations where npm modifies either the node_modules folder, or package.json file.
     - records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
@@ -37,7 +63,7 @@
 - <i>Do you need the package.json? </i> <b>Yes.  </b>
 - <i>Can you have a project with only the package-lock.json? </i> <b>No.</b>
 
-   
+For more info on package-lock.json, https://docs.npmjs.com/files/package-lock.json
 
 ## npm commmands
 * npm config
@@ -103,11 +129,16 @@ Node js consists of below:
 
 <b>Read</b> <i> Reads user input, parses the input  into JS datastructure and stores in memory</i>
 --
-
 <b>Eval</b>     <i>Takes and evaluates the data structure</i>
+--
 <b>Print</b>    <i>prints the result</i>
+--
 <b>Loop</b>     <i>Loops the above command until user presses Ctrl+C</i>
+--
 
+
+
+![](assets/replcommands.png)
 
 # Demo
 
