@@ -80,3 +80,23 @@ Functions that have access to
 ### Third Party middlewares
 
 ![](assets/thirdpartymiddlewares.png)
+
+
+
+## Post Request Handling
+Demo : postrequest/server.js
+
+## Static Files
+Demo: staticfiles/
+
+## Scaffolding
+    Scaffolding is creating the skeleton structure of application.
+    It allows users to create own public directories, routes, views etc. Once the structure for app is built, user can start building it.
+    
+    npm install express-generator -g 
+
+
+## Debugging
+https://code.visualstudio.com/docs/editor/debugging
+
+## Exception Handling
